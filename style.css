@@ -2,3 +2,11 @@
     text-align: center;
     margin-top: 20px;
 }
+
+#categorySelect{
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}

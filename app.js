@@ -78,8 +78,29 @@ var products = {
             color: "silver",
             img: "https://laptoplelo.com/wp-content/uploads/2020/02/8f3e4d6b3a9a705042a1eda3cff6d405.jpg"
         }
+    },
+    mobChargers: {
+        vivo: {
+            model: "Vivo 44W Flash Charge",
+            year: 2023,
+            color: "white",
+            img: "https://drawingtabs.pk/cdn/shop/files/92747a385f5e5a2af1d3ecc873b6288e-3273-0-020923080331488.jpg?v=1716981461"
+        },
+        oppo: {
+            model: "Oppo 65W SuperVOOC",
+            year: 2023,
+            color: "white",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8x2jD3hkMM9pv4DweIKnmmOilJ_cBFVCG8g&s"
+        },
+        redmi: {
+            model: "redmi 120W fast charge",
+            year: 2023,
+            color: "white",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv4L0xdI5M_G8qF0Q7_CGtgGbHx219sjnyIA&s"
+        }
     }
 }
+
 
 
 
@@ -91,7 +112,7 @@ var proMain1 = document.createElement("div");
 proMain1.id = "cars";
 proMain1.style.display = "flex";
 proMain1.style.flexWrap = "wrap";
-proMain1.style.justifyContent = "space-around";
+proMain1.style.justifyContent = "center";
 proMain1.style.gap = "20px";
 proMain1.style.marginTop = "30px";
 
@@ -179,7 +200,7 @@ var proMain2 = document.createElement("div");
 proMain2.id = "bikes";
 proMain2.style.display = "flex";
 proMain2.style.flexWrap = "wrap";
-proMain2.style.justifyContent = "space-around";
+proMain2.style.justifyContent = "center";
 proMain2.style.gap = "20px";
 proMain2.style.marginTop = "30px";
 var product4 = document.createElement("div");
@@ -268,7 +289,7 @@ var proMain3 = document.createElement("div");
 proMain3.id = "phones";
 proMain3.style.display = "flex";
 proMain3.style.flexWrap = "wrap";
-proMain3.style.justifyContent = "space-around";
+proMain3.style.justifyContent = "center";
 proMain3.style.gap = "20px";
 proMain3.style.marginTop = "30px";
 var product7 = document.createElement("div");
@@ -359,7 +380,7 @@ var proMain4 = document.createElement("div");
 proMain4.id = "laptops"; 
 proMain4.style.display = "flex";
 proMain4.style.flexWrap = "wrap";
-proMain4.style.justifyContent = "space-around";
+proMain4.style.justifyContent = "center";
 proMain4.style.gap = "20px";
 proMain4.style.marginTop = "30px";
 var product10 = document.createElement("div");
@@ -443,6 +464,96 @@ main.appendChild(proMain4);
 
 
 
+// -------------------------------------------------------------------- mobChargers products.
+// 5 first card
+var proMain5 = document.createElement("div");
+proMain5.id = "mobChargers"; 
+proMain5.style.display = "flex";
+proMain5.style.flexWrap = "wrap";
+proMain5.style.justifyContent = "center";
+proMain5.style.gap = "20px";
+proMain5.style.marginTop = "30px";
+var product13 = document.createElement("div");
+var img13 = document.createElement("img");
+var p13 = document.createElement("p");
+
+product13.style.backgroundColor = "#686dab";
+product13.style.borderRadius = "15px";
+product13.style.width = "300px";
+product13.style.height = "300px";
+product13.style.verticalAlign = "top";
+img13.src = products.mobChargers.vivo.img;
+img13.width = 300;
+img13.height = 230;
+img13.style.borderRadius = "10px" + " " + "10px" + " " + "0px" + " " + "0px";
+p13.innerText = products.mobChargers.vivo.model + " - " + products.mobChargers.vivo.year + " - " + products.mobChargers.vivo.color;
+p13.style.fontSize = "20px";
+p13.style.fontWeight = "bold";
+p13.style.color = "white";
+p13.style.textAlign = "center";
+
+
+product13.appendChild(img13);
+product13.appendChild(p13);
+proMain5.appendChild(product13);
+main.appendChild(proMain5);
+
+
+// 5 second card
+var product14 = document.createElement("div");
+var img14 = document.createElement("img");
+var p14 = document.createElement("p");
+
+product14.style.backgroundColor = "#686dab";
+product14.style.borderRadius = "15px";
+product14.style.width = "300px";
+product14.style.height = "300px";
+product14.style.verticalAlign = "top";
+img14.src = products.mobChargers.oppo.img;
+img14.width = 300;
+img14.height = 230;
+img14.style.borderRadius = "10px" + " " + "10px" + " " + "0px" + " " + "0px";
+p14.innerText = products.mobChargers.oppo.model + " - " + products.mobChargers.oppo.year + " - " + products.mobChargers.oppo.color;
+p14.style.fontSize = "20px";
+p14.style.fontWeight = "bold";
+p14.style.color = "white";
+p14.style.textAlign = "center";
+
+
+product14.appendChild(img14);
+product14.appendChild(p14);
+proMain5.appendChild(product14);
+main.appendChild(proMain5);
+
+
+// 5 third card
+var product15 = document.createElement("div");
+var img15 = document.createElement("img");
+var p15 = document.createElement("p");
+
+product15.style.backgroundColor = "#686dab";
+product15.style.borderRadius = "15px";
+product15.style.width = "300px";
+product15.style.height = "300px";
+product15.style.verticalAlign = "top";
+img15.src = products.mobChargers.redmi.img;
+img15.width = 300;
+img15.height = 230;
+img15.style.borderRadius = "10px" + " " + "10px" + " " + "0px" + " " + "0px";
+p15.innerText = products.mobChargers.redmi.model + " - " + products.mobChargers.redmi.year + " - " + products.mobChargers.redmi.color;
+p15.style.fontSize = "20px";
+p15.style.fontWeight = "bold";
+p15.style.color = "white";
+p15.style.textAlign = "center";
+
+
+product15.appendChild(img15);
+product15.appendChild(p15);
+proMain5.appendChild(product15);
+main.appendChild(proMain5);
+
+
+
 
 // ---------------------------------------------------- category filter code.
 var select = document.getElementById("categorySelect")
@@ -454,17 +565,20 @@ select.addEventListener("change", function (){
     var bikes = document.getElementById("bikes")
     var phones = document.getElementById("phones")
     var laptops = document.getElementById("laptops")
+    var mobChargers = document.getElementById("mobChargers")
 
     cars.style.display = "none"
     bikes.style.display = "none"
     phones.style.display = "none"
     laptops.style.display = "none"
+    mobChargers.style.display = "none"
 
     if(value == "all"){
         cars.style.display = "flex"
         bikes.style.display = "flex"
         phones.style.display = "flex"
         laptops.style.display = "flex"
+        mobChargers.style.display = "flex"
     }else if(value == "cars"){
         cars.style.display = "flex"
     }else if(value == "bikes"){
@@ -473,5 +587,7 @@ select.addEventListener("change", function (){
         phones.style.display = "flex"
     }else if(value == "laptops"){
         laptops.style.display = "flex"
+    }else if(value == "mobChargers"){
+        mobChargers.style.display = "flex"
     }
 })
