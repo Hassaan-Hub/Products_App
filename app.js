@@ -106,74 +106,75 @@ var products = {
 
 var main = document.getElementById("cards");
 
-function createCategory(name, data){
+for (var category in products) {
 
-    var wrapper = document.createElement("div");
-    wrapper.id = name;
-    wrapper.className = "wrapper";
+    var proMain = document.createElement("div");
+    proMain.id = category;
 
-    for(var key in data){
+    proMain.style.display = "flex";
+    proMain.style.flexWrap = "wrap";
+    proMain.style.justifyContent = "center";
+    proMain.style.gap = "20px";
+    proMain.style.marginTop = "30px";
 
-        var item = data[key];
+    for (var item in products[category]) {
 
-        var card = document.createElement("div");
-        card.className = "card";
-        card.dataset.name = item.model.toLowerCase(); // search ke liye
-
+        var product = document.createElement("div");
         var img = document.createElement("img");
-        img.src = item.img;
-
         var p = document.createElement("p");
-        p.innerText = item.model + " - " + item.year + " - " + item.color;
 
-        card.appendChild(img);
-        card.appendChild(p);
-        wrapper.appendChild(card);
+        product.style.backgroundColor = "#686dab";
+        product.style.borderRadius = "15px";
+        product.style.width = "300px";
+        product.style.height = "300px";
+
+        img.src = products[category][item].img;
+        img.width = 300;
+        img.height = 220;
+        img.style.borderRadius = "10px 10px 0px 0px";
+
+        p.innerText =
+            products[category][item].model + " - " +
+            products[category][item].year + " - " +
+            products[category][item].color;
+
+        p.style.fontSize = "20px";
+        p.style.fontWeight = "bold";
+        p.style.color = "white";
+        p.style.textAlign = "center";
+
+        product.appendChild(img);
+        product.appendChild(p);
+
+        proMain.appendChild(product);
     }
 
-    main.appendChild(wrapper);
-}
-
-// create all categories automatically
-for(var category in products){
-    createCategory(category, products[category]);
+    main.appendChild(proMain);
 }
 
 
+// ---------------- FILTER ----------------
 
-// ---------------------------------------------------- category filter code.
-var select = document.getElementById("categorySelect")
+var select = document.getElementById("categorySelect");
 
-select.addEventListener("change", function (){
-    var value = this.value
+select.addEventListener("change", function () {
 
-    var cars = document.getElementById("cars")
-    var bikes = document.getElementById("bikes")
-    var phones = document.getElementById("phones")
-    var laptops = document.getElementById("laptops")
-    var mobChargers = document.getElementById("mobChargers")
+    var value = this.value;
 
-    cars.style.display = "none"
-    bikes.style.display = "none"
-    phones.style.display = "none"
-    laptops.style.display = "none"
-    mobChargers.style.display = "none"
+    for (var category in products) {
 
-    if(value == "all"){
-        cars.style.display = "flex"
-        bikes.style.display = "flex"
-        phones.style.display = "flex"
-        laptops.style.display = "flex"
-        mobChargers.style.display = "flex"
-    }else if(value == "cars"){
-        cars.style.display = "flex"
-    }else if(value == "bikes"){
-        bikes.style.display = "flex"
-    }else if(value == "phones"){
-        phones.style.display = "flex"
-    }else if(value == "laptops"){
-        laptops.style.display = "flex"
-    }else if(value == "mobChargers"){
-        mobChargers.style.display = "flex"
+        var section = document.getElementById(category);
+
+        if (value === "all") {
+            section.style.display = "flex";
+        } 
+        else if (value === category) {
+            section.style.display = "flex";
+        } 
+        else {
+            section.style.display = "none";
+        }
+
     }
-})
+
+});
