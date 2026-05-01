@@ -11,6 +11,33 @@
     border-radius: 5px;
 }
 
+#theme{
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.light{
+    background-color: #fff;
+    color: #000;
+    transition: all ease 1s;
+}
+
+.dark{
+    background-color: #000000;
+    color: #ffffff;
+    transition: all ease 1s;
+}
+
+.blue{
+    background-color: #0062ff;
+    color: #ffffff;
+    transition: all ease 1s;
+}
+
+
 .wrapper{
     display:flex;
     flex-wrap:wrap;

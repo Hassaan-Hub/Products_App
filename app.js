@@ -102,6 +102,12 @@ var products = {
 }
 
 
+let body = document.querySelector("body");
+let theme = document.getElementById("theme");
+
+theme.addEventListener("change", ()=>{
+    body.className = theme.value;
+})
 
 
 var main = document.getElementById("cards");
